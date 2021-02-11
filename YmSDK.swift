@@ -78,7 +78,7 @@ public class ChatController: UIViewController, WKScriptMessageHandler, WKNavigat
         view.addSubview(webView)
         let payload = YmBotPlugin.shared.payloadData
 
-        let urlString = "https://yellowmessenger.github.io/pages/dominos/mobile.html?botId=\(YmBotPlugin.shared.configData["BotId"] ?? "")&enableHistory=false&hideTitleBar=false&ym.payload=\(payload)"
+        let urlString = "https://app.yellowmessenger.com/components/public/webviews/mobile-sdk/index.html?botId=\(YmBotPlugin.shared.configData["BotId"] ?? "")&enableHistory=false&hideTitleBar=false&ym.payload=\(payload)"
 
         print(urlString)
         
@@ -153,7 +153,7 @@ public class ChatController: UIViewController, WKScriptMessageHandler, WKNavigat
     
     public func webView(_ webView: WKWebView, decidePolicyFor navigationAction: WKNavigationAction, decisionHandler: @escaping (WKNavigationActionPolicy) -> Void) {
         if let url = navigationAction.request.url {
-             if url.host != "yellowmessenger.github.io" {
+             if url.host != "app.yellowmessenger.com" {
                            UIApplication.shared.open(url)
                            decisionHandler(.cancel)
                            return
