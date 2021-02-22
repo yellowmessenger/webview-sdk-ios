@@ -13,7 +13,7 @@ Pod::Spec.new do |s|
   #s.social_media_url = 'https://twitter.com/yellowmessenger'
   s.ios.deployment_target = '13.0'
   s.resources = ["webview_sdk_iOS/Assets.xcassets"]
-  s.source_files = 'webview_sdk_iOS/**/*'
+  s.source_files = 'webview_sdk_iOS/*.swift'
   s.swift_versions='5.0'
   #s.resource_bundles = {'webview_sdk_iOS' => ['webview_sdk_iOS/Images/*.png']}
 
