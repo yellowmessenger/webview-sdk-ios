@@ -10,6 +10,11 @@
 		ECA4B9F525E3FDF0000FDD76 /* webview_sdk_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ECA4B9EB25E3FDF0000FDD76 /* webview_sdk_iOS.framework */; };
 		ECA4B9FA25E3FDF0000FDD76 /* webview_sdk_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4B9F925E3FDF0000FDD76 /* webview_sdk_iOSTests.swift */; };
 		ECA4B9FC25E3FDF0000FDD76 /* webview_sdk_iOS.h in Headers */ = {isa = PBXBuildFile; fileRef = ECA4B9EE25E3FDF0000FDD76 /* webview_sdk_iOS.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ECA4BA0825E3FE36000FDD76 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECA4BA0725E3FE36000FDD76 /* Assets.xcassets */; };
+		ECA4BA0E25E3FE8C000FDD76 /* YmSDK.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4BA0B25E3FE8C000FDD76 /* YmSDK.swift */; };
+		ECA4BA0F25E3FE8C000FDD76 /* YmEvents.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4BA0C25E3FE8C000FDD76 /* YmEvents.swift */; };
+		ECA4BA1025E3FE8C000FDD76 /* YmBotPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4BA0D25E3FE8C000FDD76 /* YmBotPlugin.swift */; };
+		ECA4BA1425E3FE93000FDD76 /* Image.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECA4BA1325E3FE93000FDD76 /* Image.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +34,11 @@
 		ECA4B9F425E3FDF0000FDD76 /* webview_sdk_iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = webview_sdk_iOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		ECA4B9F925E3FDF0000FDD76 /* webview_sdk_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = webview_sdk_iOSTests.swift; sourceTree = "<group>"; };
 		ECA4B9FB25E3FDF0000FDD76 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECA4BA0725E3FE36000FDD76 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		ECA4BA0B25E3FE8C000FDD76 /* YmSDK.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YmSDK.swift; sourceTree = "<group>"; };
+		ECA4BA0C25E3FE8C000FDD76 /* YmEvents.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YmEvents.swift; sourceTree = "<group>"; };
+		ECA4BA0D25E3FE8C000FDD76 /* YmBotPlugin.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YmBotPlugin.swift; sourceTree = "<group>"; };
+		ECA4BA1325E3FE93000FDD76 /* Image.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Image.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,8 +81,13 @@
 		ECA4B9ED25E3FDF0000FDD76 /* webview_sdk_iOS */ = {
 			isa = PBXGroup;
 			children = (
+				ECA4BA1325E3FE93000FDD76 /* Image.swift */,
+				ECA4BA0D25E3FE8C000FDD76 /* YmBotPlugin.swift */,
+				ECA4BA0C25E3FE8C000FDD76 /* YmEvents.swift */,
+				ECA4BA0B25E3FE8C000FDD76 /* YmSDK.swift */,
 				ECA4B9EE25E3FDF0000FDD76 /* webview_sdk_iOS.h */,
 				ECA4B9EF25E3FDF0000FDD76 /* Info.plist */,
+				ECA4BA0725E3FE36000FDD76 /* Assets.xcassets */,
 			);
 			path = webview_sdk_iOS;
 			sourceTree = "<group>";
@@ -147,6 +162,7 @@
 				TargetAttributes = {
 					ECA4B9EA25E3FDF0000FDD76 = {
 						CreatedOnToolsVersion = 12.2;
+						LastSwiftMigration = 1220;
 					};
 					ECA4B9F325E3FDF0000FDD76 = {
 						CreatedOnToolsVersion = 12.2;
@@ -177,6 +193,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECA4BA0825E3FE36000FDD76 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -194,6 +211,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECA4BA0F25E3FE8C000FDD76 /* YmEvents.swift in Sources */,
+				ECA4BA1425E3FE93000FDD76 /* Image.swift in Sources */,
+				ECA4BA1025E3FE8C000FDD76 /* YmBotPlugin.swift in Sources */,
+				ECA4BA0E25E3FE8C000FDD76 /* YmSDK.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +362,7 @@
 		ECA4BA0025E3FDF0000FDD76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -356,6 +378,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "Learn.webview-sdk-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +387,7 @@
 		ECA4BA0125E3FDF0000FDD76 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -387,6 +411,7 @@
 		ECA4BA0325E3FDF0000FDD76 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = webview_sdk_iOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -404,6 +429,7 @@
 		ECA4BA0425E3FDF0000FDD76 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = webview_sdk_iOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
