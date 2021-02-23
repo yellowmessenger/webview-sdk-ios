@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-class YmBotPlugin{
+public class YmBotPlugin{
     
-    static let shared = YmBotPlugin()
+    public static let shared = YmBotPlugin()
     var configData: [String : String]
     var payloadData: String
 
-    let events : EventManager
+    public let events : EventManager
     var window : UIWindow
     private init(){
         self.configData = Dictionary<String, String>()
@@ -24,11 +24,11 @@ class YmBotPlugin{
         self.window = UIWindow()
     }
     
-    func initPlugin(config : Dictionary<String, String>) {
+    public func initPlugin(config : Dictionary<String, String>) {
         self.configData = config
     }
     
-    func startChatBot(view : UIView){
+    public func startChatBot(view : UIView){
         let chatViewer = ChatController()
         guard let windowScene = view.window?.windowScene else { return }
         let window = UIWindow(windowScene: windowScene)
@@ -37,10 +37,10 @@ class YmBotPlugin{
         window.makeKeyAndVisible()
     }
     
-    func stopChatBot(){
+    public func stopChatBot(){
         self.window.rootViewController = nil
     }
-    func setPayload(payload: Dictionary<String, String>) {
+    public func setPayload(payload: Dictionary<String, String>) {
             payloadData = "%7B"
          payload.forEach({ (key: String, value: String) in
             payloadData += "%22\(key)%22:%22\(value)%22,"

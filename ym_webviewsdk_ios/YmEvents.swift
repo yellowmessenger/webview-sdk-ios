@@ -7,14 +7,14 @@
 
 import Foundation
 
-class EventManager {
+public class EventManager {
     var listeners = Dictionary<String, NSMutableArray>();
     
-    func listenTo(eventName:String, action: @escaping (()->())) {
+    public func listenTo(eventName:String, action: @escaping (()->())) {
         let newListener = EventListenerAction(callback: action);
         addListener(eventName: eventName, newEventListener: newListener);
     }
-    func listenTo(eventName:String, action: @escaping ((Any?)->())) {
+    public func listenTo(eventName:String, action: @escaping ((Any?)->())) {
         let newListener = EventListenerAction(callback: action);
         addListener(eventName: eventName, newEventListener: newListener);
     }

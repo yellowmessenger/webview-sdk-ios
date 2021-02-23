@@ -3,15 +3,9 @@ Yellow Messenger WebView SDK iOS
 
 ## Setup
 
-Clone the [repository](https://github.com/yellowmessenger/webview-sdk-ios) then add the following files in your xcode project by going to **File>Add Files to < Project-Name >** 
-
-**1. [YmSDK.swift](YmSDK.swift)**  
-**2. [YmEvents.swift](YmEvents.swift)**  
-**3. [YmBotPlugin.swift](YmBotPlugin.swift)**  
-
-Also add the the icons for mic button and close button in assets.
-
- 
+```podspec
+pod 'ym_webviewsdk_ios', :git => 'https://github.com/yellowmessenger/webview-sdk-ios.git', :branch => 'alpha-library'
+``` 
 
 ## Example
 Example swift code to use the plugin
