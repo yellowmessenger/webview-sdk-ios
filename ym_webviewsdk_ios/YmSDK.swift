@@ -97,7 +97,7 @@ public class ChatController: UIViewController, WKScriptMessageHandler, WKNavigat
                     button.layer.cornerRadius = 0.5 * button.bounds.size.width
                     button.clipsToBounds = true
             button.backgroundColor = UIColor(red: 0/255.0, green: 172/255.0, blue: 220/255.0, alpha: 1.0)
-            button.setImage(UIImage(named: "mic_icon"), for: .normal)
+            button.setImage(Image.mic.uiImage, for: .normal)
             button.imageView?.contentMode = .scaleAspectFit
             button.imageEdgeInsets = UIEdgeInsets(top: 25, left: 25, bottom: 25, right: 25)
                     button.isHidden = true
@@ -142,9 +142,10 @@ public class ChatController: UIViewController, WKScriptMessageHandler, WKNavigat
         }
         view.addSubview(progressView)
         let statusBarHeight = UIApplication.shared.isStatusBarHidden ? CGFloat(0) : UIApplication.shared.statusBarFrame.height
+//        let statusBarHeight=view.window?.windowScene?.statusBarManager?.statusBarFrame.height ?? 0
                      
         let cancelButton = UIButton(type: .custom)
-        cancelButton.setImage(UIImage(named: "close"), for: .normal)
+        cancelButton.setImage(Image.close.uiImage, for: .normal)
         cancelButton.frame = CGRect(x: (self.view.frame.width - 50), y: (statusBarHeight + 15.0), width: 25, height: 25)
         cancelButton.addTarget(self, action: #selector(dismisViewController), for: .touchUpInside)
         view.addSubview(cancelButton)
@@ -207,13 +208,13 @@ public class ChatController: UIViewController, WKScriptMessageHandler, WKNavigat
     //On button Press
     @objc func micButton(){
         if audioEngine.isRunning {
-            button.setImage(UIImage(named: "mic_icon"), for: .normal)
+            button.setImage(Image.mic.uiImage, for: .normal)
             audioEngine.stop()
             recognitionRequest = nil
             sendMessage(text: textView.text)
             textView.isHidden = true
         } else {
-            button.setImage(UIImage(named: "close"), for: .normal)
+            button.setImage(Image.close.uiImage, for: .normal)
             textView.isHidden = false
             startRecording()
         }
@@ -312,7 +313,7 @@ public class ChatController: UIViewController, WKScriptMessageHandler, WKNavigat
             self.sendMessage(text: self.textView.text)
             self.textView.text = ""
             self.textView.isHidden = true
-            self.button.setImage(UIImage(named: "mic_icon"), for: .normal)
+            self.button.setImage(Image.mic.uiImage, for: .normal)
 
         })
     }
