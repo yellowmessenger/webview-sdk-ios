@@ -4,7 +4,7 @@ Yellow Messenger WebView SDK iOS
 ## Setup
 
 ```podspec
-pod 'ym_webviewsdk_ios', :git => 'https://github.com/yellowmessenger/webview-sdk-ios.git', :branch => 'alpha-library'
+pod 'ym_webviewsdk_ios', :git => 'https://github.com/yellowmessenger/webview-sdk-ios.git'
 ``` 
 
 ## Example
