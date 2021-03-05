@@ -1,5 +1,7 @@
-Yellow Messenger WebView SDK iOS
-=======================
+# ⚠️ This repo has been deprecated
+This repo has been deprecated in favour of [YMChatbot-iOS](https://github.com/yellowmessenger/YMChatbot-iOS)
+
+# Yellow Messenger iOS SDK
 
 ## Setup
 
